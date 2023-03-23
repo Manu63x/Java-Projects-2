@@ -10,7 +10,9 @@ public class ThreadCounter extends Thread{
         g.getLblCounter().setText(""+0);
     }
     public void run(){
-        g.setThreads(true);
+        synchronized (g){
+            g.setThreads(true);
+        }
         while(g.getStop() == false){
             tmp = Integer.parseInt(g.getLblCounter().getText());
             try {
@@ -18,9 +20,13 @@ public class ThreadCounter extends Thread{
             }catch (InterruptedException e){
                 e.printStackTrace();
             }
+            if(g.getStop() != false)
+                break;
             tmp++;
             g.getLblCounter().setText("" + tmp);
         }
-        g.setThreads(false);
+        synchronized (g){
+            g.setThreads(false);
+        }
     }
 }

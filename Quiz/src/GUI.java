@@ -17,16 +17,16 @@ public class GUI {
         Container c = frm.getContentPane();
         pnlImg = new JPanel();
         pnlImg.setLayout(new GridLayout(2,1));
-        pnlImg.setBackground(Color.BLUE);
+        pnlImg.setBackground(Color.GRAY);
         pnlSouth = new JPanel();
         pnlSouth.setLayout(new GridLayout(3,1));
-        pnlSouth.setBackground(Color.BLUE);
+        pnlSouth.setBackground(Color.GRAY);
         pnlText = new JPanel();
         pnlText.setLayout(new FlowLayout());
-        pnlText.setBackground(Color.BLUE);
+        pnlText.setBackground(Color.GRAY);
         pnlInput = new JPanel();
         pnlInput.setLayout(new FlowLayout());
-        pnlInput.setBackground(Color.BLUE);
+        pnlInput.setBackground(Color.GRAY);
         lblTitle = new JLabel("Guess the character", SwingConstants.CENTER);
         lblTitle.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 14));
         lblImg = new JLabel(new ImageIcon());
@@ -51,7 +51,7 @@ public class GUI {
         c.add(pnlImg, BorderLayout.CENTER);
         c.add(pnlSouth, BorderLayout.SOUTH);
 
-        frm.getContentPane().setBackground(Color.BLUE);
+        frm.getContentPane().setBackground(Color.GRAY);
         frm.setSize(new Dimension(600, 400));
         frm.setVisible(true);
     }
